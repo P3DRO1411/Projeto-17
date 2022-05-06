@@ -52,7 +52,7 @@ mainCyclist.scale=0.07;
 //mainCyclist.setCollission("rectangle",0,0,40,40);
 //mainCyclist.setCollider("rectangle",0,0,40,40);
 //mainCyclist.setCollission("rectangle",0,0,40,40,50);
-//mainCyclist.setCollider("rectangle",0,0,40,40,50);
+mainCyclist.setCollider("rectangle",0,0,40,40,50);
 
   
 gameOver = createSprite(650,150);
@@ -80,7 +80,7 @@ function draw() {
    path.velocityX = -(6 + 2*distance/150);
   
    mainCyclist.y = World.mouseY;
-  
+  gameOver.visible=false;
    edges= createEdgeSprites();
    mainCyclist .collide(edges);
   
@@ -164,7 +164,7 @@ function draw() {
 }
 
 function pinkCyclists(){
-        player1 =createSprite(1100,Math.round(random(50, 250)));
+        player1 =createSprite(1220,Math.round(random(50, 250)));
         player1.scale =0.06;
         player1.velocityX = -(6 + 2*distance/150);
         player1.addAnimation("opponentPlayer1",oppPink1Img);
@@ -173,7 +173,7 @@ function pinkCyclists(){
 }
 
 function yellowCyclists(){
-        player2 =createSprite(1100,Math.round(random(50, 250)));
+        player2 =createSprite(1220,Math.round(random(50, 250)));
         player2.scale =0.06;
         player2.velocityX = -(6 + 2*distance/150);
         player2.addAnimation("opponentPlayer2",oppYellow1Img);
@@ -182,7 +182,7 @@ function yellowCyclists(){
 }
 
 function redCyclists(){
-        player3 =createSprite(1100,Math.round(random(50, 250)));
+        player3 =createSprite(1220,Math.round(random(50, 250)));
         player3.scale =0.06;
         player3.velocityX = -(6 + 2*distance/150);
         player3.addAnimation("opponentPlayer3",oppRed1Img);
